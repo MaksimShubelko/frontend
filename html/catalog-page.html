@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<header>
+    <link rel="stylesheet" href="../css/product-grid.css">
+    <link rel="stylesheet" href="../css/rating.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/add-to-cart-button.css">
+    <link rel="stylesheet" href="../css/filter.css">
+</header>
+<body>
+<div class="filter-area">
+    <div class="filter-buttons">
+        <button class="active show-all">All</button>
+        <button class="show-favorites">Favourites</button>
+        <button class="show-comparison">Comparison</button>
+    </div>
+    <label class="checkbox-container">
+        Show Hidden
+        <input type="checkbox" class="checkbox-show-hidden" checked>
+        <span class="checkmark"></span>
+    </label>
+</div>
+<div class="grid-container">
+    <div class="product" id="2">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 1</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    35$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="3">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 2</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    100$
+                </div>
+                <div class="previous-price">
+                    125$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="4">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 3</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    120$
+                </div>
+                <div class="previous-price">
+                    145$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="5">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 4</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    80$
+                </div>
+                <div class="previous-price">
+                    105$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="6">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 5</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    100$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="7">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 6</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    30$
+                </div>
+                <div class="previous-price">
+                    25$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="8">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 7</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    44$
+                </div>
+                <div class="previous-price">
+                    45$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="9">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 8</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    20$
+                </div>
+                <div class="previous-price">
+                    55$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="10">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 9</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    213$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+    <div class="product" id="1">
+        <div class="product-icons">
+            <img class="product-icon visible-icon" data-value="on" onclick="toggleIcon(this)" src="../img/icon/eye.png"
+                 alt="photo">
+            <img class="product-icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                 src="../img/icon/heart.png"
+                 alt="photo">
+            <img class="product-icon compare-icon" data-value="off" onclick="toggleIcon(this)" src="../img/icon/scales.png"
+                 alt="photo">
+        </div>
+        <img class="product-img" src="../img/product/img.png" alt="photo">
+        <span class="product-name">Cat 10</span>
+        <div class="rating">
+            <div class="stars">
+                <div class="active-stars">
+                    <span class="star star-active" data-value="1"></span>
+                    <span class="star star-active" data-value="2"></span>
+                    <span class="star star-active" data-value="3"></span>
+                    <span class="star star-active" data-value="4"></span>
+                    <span class="star star-active" data-value="5"></span>
+                </div>
+                <div class="inactive-stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+                <div class="star-mask"></div>
+            </div>
+            <div class="rating-value">0.0</div>
+            <div class="price">
+                <div class="current-price">
+                    35$
+                </div>
+                <div class="previous-price">
+                    45$
+                </div>
+            </div>
+            <button class="add-to-cart">
+                <span class="icon"></span>
+                Add to cart
+            </button>
+        </div>
+    </div>
+</div>
+<script src="../js/rating.js"></script>
+<script src="../js/icon-click.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/storage.js"></script>
+</body>

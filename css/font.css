@@ -1,0 +1,12 @@
+@font-face {
+    font-family: MADELikesSlab;
+    src: url("../font/madelikesslab/madelikesslab.eot");
+    src: url("../font/madelikesslab/madelikesslab.svg");
+    src: url("../font/madelikesslab/madelikesslab.ttf");
+    src: url("../font/madelikesslab/madelikesslab.woff");
+    src: url("../font/madelikesslab/madelikesslab.woff2");
+}
+
+.product-name {
+    font-family: MADELikesSlab, serif;
+}
