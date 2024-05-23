@@ -16,14 +16,14 @@ products.forEach((productSection) => {
 function handleClickVisibleProductIcon(event) {
     const targetElement = event.target, productNode = targetElement.parentNode.parentNode
     if (targetElement.getAttribute('data-value') === 'off') {
+        productNode.style.opacity = '1';
+        invisibleProducts = removeFromArray(invisibleProducts, productNode);
+    } else {
         if (!navSection.querySelector('.checkbox-show-hidden').checked) {
             productNode.classList.push('product-hidden');
         }
         productNode.style.opacity = '0.5';
         invisibleProducts.push(productNode);
-    } else {
-        productNode.style.opacity = '1';
-        invisibleProducts = removeFromArray(invisibleProducts, productNode);
     }
 }
 
