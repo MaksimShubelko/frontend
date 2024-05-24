@@ -5,7 +5,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #4caf50;
+    background-color: #4e78bd;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -14,7 +14,7 @@
 }
 
 .add-to-cart:hover {
-    background-color: #45a049;
+    background-color: #6381f4;
 }
 
 .icon {
@@ -22,7 +22,7 @@
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    background-image: url('../img/button/shopping-cart.png');
+    background-image: url('../img/button/package.png');
     background-size: cover;
     vertical-align: middle;
 }

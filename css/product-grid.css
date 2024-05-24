@@ -11,21 +11,20 @@
     background-color: rgba(248, 247, 245, 0.8);
     font-size: 18px;
     width: 200px;
-    min-height: 120px;
-    float: left;
-    margin: 3px;
+    height: 400px;
     padding: 3px;
     position: relative;
     top: 40px;
 }
 
 .product-img {
-    margin: 0;
-    padding: 0;
     max-width: 125px;
-    position: absolute;
-    background-color: #ffec99;
-
+    position: relative;
+    display: flex;
+    height: 175px;
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .product-icons {
@@ -36,6 +35,7 @@
     width: 25px;
     position: absolute;
     left: 150px;
+    z-index: 100;
     height: 100px;
     opacity: 1 !important;
 }
@@ -51,15 +51,21 @@
 }
 
 .price > .current-price {
-    color: #045905;
+    color: #000000;
+    font-size: 20px;
     margin: 5px;
-    font-size: 28px;
+}
+
+.price > .discounted-price {
+    color: #ff001e;
+    font-size: 20px;
+    margin: 5px;
 }
 
 .price > .previous-price {
     color: #252a05;
+    font-size: 20px;
     margin: 5px;
-    font-size: 24px;
     text-decoration: line-through black;
 }
 
@@ -69,19 +75,45 @@
 
 .product-icon {
     padding-bottom: 3px;
+    width: 32px;
+    border-radius: 50px;
+    border: 3px solid white;
+    background-color: white;
+}
+
+.new-product {
+    color: #ffffff;
+    width: 35px;
+    position: absolute;
+    background-color: #6381f4;
+    font-size: 12px;
+    text-align: center;
 }
 
 .product-name {
-    position: absolute;
-    top: 150px;
+    position: relative;
+    margin-top: 5px;
     width: inherit;
     height: inherit;
     white-space: nowrap;
-    color: #080b9b;
+    color: rgb(0, 0, 0);
     text-overflow: ellipsis;
     overflow: hidden !important;
-    text-align: center
+    text-align: center;
+}
 
+.product-category {
+    position: absolute;
+    opacity: 50%;
+    font-size: 15px;
+    width: inherit;
+    margin-top: 10px;
+    height: inherit;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+    text-align: center;
 }
 
 .product {

@@ -32,14 +32,14 @@ function handleNavButtonClick(event) {
     let productsGroup = resolveGroupProductsToDisplay();
     if (isCheckboxChecked()) {
         productsGroup.forEach((product) => {
-            product.style.display = 'flex';
+            product.style.display = 'block';
         });
     } else {
         productsGroup.forEach((product) => {
             if (isArrayContainsObject(invisibleProducts, product)) {
                 product.style.display = 'none';
             } else {
-                product.style.display = 'flex';
+                product.style.display = 'block';
             }
         });
     }
@@ -50,18 +50,18 @@ function handleNavButtonClick(event) {
     });
 }
 
-function handleCheckBoxCheck(event) {
+function handleCheckBoxCheck() {
     if (!checkBox.checked) {
         resolveGroupProductsToDisplay().forEach((product) => {
             if (isArrayContainsObject(invisibleProducts, product)) {
                 product.style.display = 'none';
             } else {
-                product.style.display = 'flex';
+                product.style.display = 'block';
             }
         });
     } else {
         resolveGroupProductsToDisplay().forEach((product) => {
-            product.style.display = 'flex';
+            product.style.display = 'block';
         });
     }
 }

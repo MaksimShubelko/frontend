@@ -1,8 +1,8 @@
 .rating {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 175px;
+    position: absolute;
+    padding-top: 30px;
     width: inherit;
     align-content: center;
 }
