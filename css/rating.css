@@ -1,19 +1,19 @@
 .rating {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     padding-top: 30px;
     width: inherit;
     align-content: center;
 }
 
 .stars {
-    display: block;
+    display: inline-block;
     align-self: center;
     position: relative;
+    align-items: stretch;
     font-size: 0;
     overflow: hidden;
-
 }
 
 .star {

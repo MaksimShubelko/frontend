@@ -1,27 +1,25 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px 30px;
-    padding: 10px;
-    grid-auto-rows: 500px;
-    grid-auto-columns: 500px;
+    gap: 5px 5px;
+    grid-auto-rows: 425px;
+    grid-auto-columns: 425px;
+    padding-top: 5px;
+    background-color: lightgray;
 }
 
 .grid-container > div {
+    display: block;
     background-color: rgba(248, 247, 245, 0.8);
     font-size: 18px;
-    width: 200px;
-    height: 400px;
-    padding: 3px;
+    width: 300px;
     position: relative;
-    top: 40px;
 }
 
 .product-img {
-    max-width: 125px;
     position: relative;
     display: flex;
-    height: 175px;
+    height: 200px;
     padding-top: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -34,7 +32,8 @@
     justify-content: center;
     width: 25px;
     position: absolute;
-    left: 150px;
+    left: 250px;
+    top: 10px;
     z-index: 100;
     height: 100px;
     opacity: 1 !important;
@@ -43,7 +42,7 @@
 .price {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-content: end;
     justify-content: center;
     padding: 10px;
     text-overflow: ellipsis;
@@ -54,6 +53,13 @@
     color: #000000;
     font-size: 20px;
     margin: 5px;
+}
+
+.product-info {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    bottom: 0;
 }
 
 .price > .discounted-price {
@@ -88,13 +94,13 @@
     background-color: #6381f4;
     font-size: 12px;
     text-align: center;
+    margin: 5px;
 }
 
 .product-name {
     position: relative;
     margin-top: 5px;
     width: inherit;
-    height: inherit;
     white-space: nowrap;
     color: rgb(0, 0, 0);
     text-overflow: ellipsis;
@@ -118,6 +124,8 @@
 
 .product {
     opacity: 1;
+    margin: 5px;
+    background-color: black;
 }
 
 @media screen and (max-width: 480px) {
