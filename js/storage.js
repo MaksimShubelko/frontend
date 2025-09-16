@@ -1,5 +1,6 @@
 window.addEventListener('load', restoreStateFromLocalStorage)
 document.querySelectorAll('.product-icon').forEach(icon => icon.addEventListener('click', saveStateToLocalStorage))
+navSection = document.querySelector('.filter-area')
 
 function saveStateToLocalStorage() {
     const state = {
@@ -18,9 +19,13 @@ function restoreStateFromLocalStorage() {
         state.hidden.forEach(productId => {
             const product = document.getElementById(productId);
             if (product) {
-                product.querySelector(".visible-icon").setAttribute('data-value', 'off');
+                if (!navSection.querySelector('.checkbox-show-hidden').checked) {
+                    product.classList.add('product-hidden');
+                }
+                product.querySelector(".visible-icon").setAttribute('data-value', 'on');
                 invisibleProducts.push(product);
-                product.style.opacity = '0.5';
+                product.classList.add('product-transparent')
+
             }
         });
 

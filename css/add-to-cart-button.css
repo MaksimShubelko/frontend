@@ -18,7 +18,8 @@
     position: relative;
     background-color: lightgray;
     height: 50px;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .add-to-cart:hover {
