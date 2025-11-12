@@ -18,20 +18,20 @@ products.forEach((productSection) => {
 function handleClickVisibleProductIcon(event) {
     const targetElement = event.target, productNode = targetElement.parentNode.parentNode
     if (targetElement.getAttribute('data-value') === off) {
-        productNode.classList.remove('product-transparent')
+        productNode.style.opacity = '0.5'
         invisibleProducts = removeFromArray(invisibleProducts, productNode);
     } else {
         if (!navSection.querySelector('.checkbox-show-hidden').checked) {
-            productNode.classList.add('product-hidden');
+            productNode.style.opacity = '0'
         }
-        productNode.classList.add('product-transparent')
+        productNode.style.opacity = '0.5'
         invisibleProducts.push(productNode);
     }
 }
 
 function handleClickFavoriteProductIcon(event) {
     const targetElement = event.target, productNode = targetElement.parentNode.parentNode
-    if (targetElement.getAttribute('data-value') === on) {
+    if (targetElement.getAttribute('data-value') === off) {
         favoriteProducts = removeFromArray(favoriteProducts, productNode);
     } else {
         favoriteProducts.push(productNode);
@@ -52,7 +52,7 @@ function removeFromArray(array, obj) {
 }
 
 function toggleIcon(icon) {
-    if (icon.getAttribute('data-value') === 'off') {
+    if (icon.getAttribute('data-value') === off) {
         icon.setAttribute('data-value', on);
     } else {
         icon.setAttribute('data-value', off);
