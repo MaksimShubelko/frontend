@@ -31,7 +31,7 @@ function handleClickVisibleProductIcon(event) {
 
 function handleClickFavoriteProductIcon(event) {
     const targetElement = event.target, productNode = targetElement.parentNode.parentNode
-    if (targetElement.getAttribute('data-value') === on) {
+    if (targetElement.getAttribute('data-value') === off) {
         favoriteProducts = removeFromArray(favoriteProducts, productNode);
     } else {
         favoriteProducts.push(productNode);
@@ -52,7 +52,7 @@ function removeFromArray(array, obj) {
 }
 
 function toggleIcon(icon) {
-    if (icon.getAttribute('data-value') === 'off') {
+    if (icon.getAttribute('data-value') === off) {
         icon.setAttribute('data-value', on);
     } else {
         icon.setAttribute('data-value', off);
