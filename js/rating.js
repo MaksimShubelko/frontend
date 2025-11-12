@@ -1,21 +1,21 @@
-const ratingSections = document.querySelectorAll('.rating')
+const ratingSections = document.querySelectorAll('.rating');
 
 ratingSections.forEach(ratingSection => {
     let stars = ratingSection.querySelectorAll('.star'),
-        currentRating = 0, totalVotes = 0,
-        ratingValue = ratingSection.querySelector('.rating-value');
-    stars.forEach((star) => {
-        star.addEventListener('click', handleStarClick);
-    });
+        currentRating = 5, totalVotes = 1;
+
+    stars.forEach(star => star.addEventListener('click', handleStarClick));
 
     function handleStarClick(event) {
-        let star = event.target, ratingSection = star.parentNode.parentNode,
-            value = parseFloat(star.getAttribute('data-value')),
-            starMask = ratingSection.querySelector('.star-mask');
-        totalVotes++;
-        currentRating = (currentRating * (totalVotes - 1) + value) / totalVotes;
-        starMask.style.width = `${100 - currentRating * 100 / 5}%`;
-        ratingValue.textContent = currentRating.toFixed(1);
+        if (!ratingSection.hasAttribute('estimated')) {
+            ratingSection.setAttribute('estimated', 'true');
+            const star = event.target;
+            const rs = star.parentNode.parentNode;
+            const value = parseFloat(star.getAttribute('data-value'));
+            const starMask = rs.querySelector('.star-mask');
+            totalVotes++;
+            currentRating = (currentRating * (totalVotes - 1) + value) / totalVotes;
+            if (starMask) starMask.style.width = `${100 - currentRating * 100 / 5}%`;
+        }
     }
 });
-

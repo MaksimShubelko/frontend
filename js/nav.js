@@ -44,7 +44,7 @@ function handleNavButtonClick(event) {
         });
     }
     products.forEach((product) => {
-        if (!isArrayContainsObject(productsGroup, product)) {
+        if (!isArrayContainsObject(Array.from(productsGroup), product)) {
             product.classList.add('product-hidden');
         }
     });
@@ -67,7 +67,7 @@ function handleCheckBoxCheck() {
 }
 
 function isArrayContainsObject(arr, obj) {
-    return arr.includes(obj);
+    return arr.map(product => product.id).some(id => id === obj.id);
 }
 
 function isCheckboxChecked() {
