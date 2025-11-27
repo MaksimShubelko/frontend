@@ -1,4 +1,4 @@
-.filter-area {
+.filters {
     background: linear-gradient(135deg, #c5e4be, rgb(236, 236, 236));
     padding: 10px 0;
     display: flex;
@@ -6,11 +6,11 @@
     align-items: center;
 }
 
-.filter-buttons {
+.filters__buttons {
     margin-right: 10px;
 }
 
-.filter-buttons button {
+.filters__buttons button {
     background-color: #4eb7a6;
     color: #fff;
     border: none;
@@ -22,11 +22,11 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.filter-buttons button.active {
+.filters__buttons button.active {
     background-color: #389c8a;
 }
 
-.checkbox-container {
+.filters__checkbox {
     display: flex;
     align-items: center;
     color: #616161;
@@ -34,11 +34,11 @@
     cursor: pointer;
 }
 
-.checkbox-container input {
+.filters__checkbox input {
     display: none;
 }
 
-.checkmark {
+.filters__checkbox-mark {
     width: 18px;
     height: 18px;
     border: 2px solid #4eb7a6;
@@ -47,13 +47,13 @@
     position: relative;
 }
 
-.checkmark:before {
+.filters__checkbox-mark:before {
     content: "";
     position: absolute;
     display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark:before {
+.filters__checkbox input:checked ~ .filters__checkbox-mark:before {
     display: block;
     background-color: #4eb7a6;
     width: 8px;
@@ -65,34 +65,34 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .filter-area {
+    .filters {
         flex-direction: column;
         padding: 20px;
     }
 
-    .filter-buttons {
+    .filters__buttons {
         margin-bottom: 10px;
     }
 
-    .checkbox-container {
+    .filters__checkbox {
         font-size: 12px;
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .filter-area {
+    .filters {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 20px;
     }
 
-    .filter-buttons {
+    .filters__buttons {
         margin-bottom: 10px;
     }
 }
 
 @media only screen and (min-width: 1025px) {
-    .filter-area {
+    .filters {
         padding: 30px;
     }
 }

@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<header>
+    <link rel="stylesheet" href="src/assets/css/product-grid.css">
+    <link rel="stylesheet" href="src/assets/css/rating.css">
+    <link rel="stylesheet" href="src/assets/css/font.css">
+    <link rel="stylesheet" href="src/assets/css/add-to-cart-button.css">
+    <link rel="stylesheet" href="src/assets/css/filter.css">
+</header>
+<body>
+<div class="filters">
+    <div class="filters__buttons">
+        <button class="filters__button show-all active">All</button>
+        <button class="filters__button show-favorites">Favourites</button>
+        <button class="filters__button show-comparison">Comparison</button>
+    </div>
+    <label class="filters__checkbox">
+        Show Hidden
+        <input type="checkbox" class="filters__checkbox-input" checked>
+        <span class="filters__checkbox-mark"></span>
+    </label>
+</div>
+<div class="container">
+    <div class="products">
+        <div class="product" id="1">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_1.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="3.5" data-review-count="2">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="2">
+            <div class="product__new">New</div>
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_2.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="2" data-review-count="1">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="3">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_3.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating=3.1 data-review-count="8">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price discounted-price">
+                        $120
+                    </div>
+                    <div class="previous-price">
+                        $145
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="4">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_4.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="4" data-review-count="3">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price discounted-price">
+                        $127
+                    </div>
+                    <div class="product__info-price previous-price">
+                        $189
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="5">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_5.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="4.2" data-review-count="3">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="6">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_6.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="1.4" data-review-count="8">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="7">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_7.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="2.4" data-review-count="3">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="8">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_8.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="1.4" data-review-count="8">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="9">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_9.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="2.9" data-review-count="6">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="10">
+            <div class="product__icons">
+                <img class="product__icon visible-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/eye.png"
+                     alt="photo">
+                <img class="product__icon like-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/heart.png"
+                     alt="photo">
+                <img class="product__icon compare-icon" data-value="off" onclick="toggleIcon(this)"
+                     src="src/assets/images/icon/scales.png"
+                     alt="photo">
+            </div>
+            <img class="product__image" src="src/assets/images/product/product_10.png" alt="photo">
+            <div class="product__info">
+                <div class="product__info-category">T-SHIRTS</div>
+                <div class="product__info-rating">
+                    <div class="rating__stars" style="--rating: data-rating" data-rating="2.4" data-review-count="11">
+                        <div class="rating__stars-active">
+                            <span class="rating__star star-active" data-value="1"></span>
+                            <span class="rating__star star-active" data-value="2"></span>
+                            <span class="rating__star star-active" data-value="3"></span>
+                            <span class="rating__star star-active" data-value="4"></span>
+                            <span class="rating__star star-active" data-value="5"></span>
+                        </div>
+                        <div class="rating__stars-inactive">
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                            <span class="rating__star"></span>
+                        </div>
+                        <div class="rating__stars-mask"></div>
+                    </div>
+                </div>
+                <div class="product__info-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="product__info-prices">
+                    <div class="product__info-price current-price">
+                        $35
+                    </div>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__info-button add-to-cart">
+                        <span class="product__info-button-icon add-to-cart-icon"></span>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="src/assets/js/main.js"></script>
+</body>

@@ -1,4 +1,4 @@
-.rating {
+.product__info-rating {
     display: flex;
     flex-direction: column;
     width: inherit;
@@ -6,7 +6,8 @@
     position: relative;
 }
 
-.stars {
+.rating__stars {
+    --rating: 0;
     display: inline-block;
     align-self: center;
     position: relative;
@@ -15,11 +16,11 @@
     overflow: hidden;
 }
 
-.star {
+.rating__star {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url(../img/rating/star-active.png);
+    background-image: url(../images/rating/star-active.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -28,12 +29,12 @@
     z-index: 1;
 }
 
-.star.star-active {
-    background-image: url(../img/rating/star-inactive.png);
+.rating__star.star-active {
+    background-image: url(../images/rating/star-inactive.png);
     z-index: 1;
 }
 
-.inactive-stars {
+.rating__stars-inactive {
     position: relative;
     top: 0;
     left: 0;
@@ -43,16 +44,16 @@
     z-index: 2;
 }
 
-.active-stars {
+.rating__stars-active {
     position: absolute;
     z-index: 3;
 }
 
-.star-mask {
+.rating__stars-mask {
     position: absolute;
     top: 0;
     right: 0;
-    width: 0;
+    width: calc(100% - var(--rating) * 100% / 5) ;
     height: 100%;
     background-color: white;
     z-index: 2;

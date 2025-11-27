@@ -1,7 +1,0 @@
-.product-icon[data-value=on] {
-    opacity: 100%;
-}
-
-.product-icon[data-value=off] {
-    opacity: 50%;
-}
