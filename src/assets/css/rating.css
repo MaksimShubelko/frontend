@@ -7,7 +7,8 @@
 }
 
 .rating__stars {
-    --rating: 0;
+    --rating-width-integer-part: 0%;
+    --rating-width-total: 0% ;
     display: inline-block;
     align-self: center;
     position: relative;
@@ -49,11 +50,76 @@
     z-index: 3;
 }
 
+.rating-value {
+    font-size: 18px;
+    align-self: center;
+}
+
+.rating__stars[data-rating^='1'] {
+    --rating-width-integer-part: 20%
+}
+
+.rating__stars[data-rating^='2'] {
+    --rating-width-integer-part: 40%
+}
+
+.rating__stars[data-rating^='3'] {
+    --rating-width-integer-part: 60%
+}
+
+.rating__stars[data-rating^='4'] {
+    --rating-width-integer-part: 80%
+}
+
+.rating__stars[data-rating^='5'] {
+    --rating-width-integer-part: 100%
+}
+
+.rating__stars[data-rating$='.0'] {
+    --rating-width-total: var(--rating-width-integer-part);
+}
+
+.rating__stars[data-rating$='.1'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 2%);
+}
+
+.rating__stars[data-rating$='.2'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 4%);
+}
+
+.rating__stars[data-rating$='.3'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 6%);
+}
+
+.rating__stars[data-rating$='.4'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 8%);
+}
+
+.rating__stars[data-rating$='.5'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 10%);
+}
+
+.rating__stars[data-rating$='.6'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 12%);
+}
+
+.rating__stars[data-rating$='.7'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 14%);
+}
+
+.rating__stars[data-rating$='.8'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 16%);
+}
+
+.rating__stars[data-rating$='.9'] {
+    --rating-width-total: calc(var(--rating-width-integer-part) + 18%);
+}
+
 .rating__stars-mask {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - var(--rating) * 100% / 5) ;
+    width: calc(100% - var(--rating-width-total));
     height: 100%;
     background-color: white;
     z-index: 2;
@@ -61,9 +127,4 @@
     transition: transform 0.2s;
     transform-origin: right;
     overflow: hidden;
-}
-
-.rating-value {
-    font-size: 18px;
-    align-self: center;
 }

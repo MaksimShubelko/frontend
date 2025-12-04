@@ -2,11 +2,8 @@ let products
 let invisibleProducts = []
 let favoriteProducts = []
 let compareProducts = []
-let buttons = document.querySelectorAll('.filters__buttons button'),
-    checkBox = document.querySelector('.filters__checkbox-input'),
-    navSection = document.querySelector('.filters')
+let buttons, checkBox, navSection
 const favouriteProductIconClass = '.like-icon', comparativeProductIconClass = '.compare-icon'
-document.querySelectorAll('.product__icon').forEach(icon => icon.addEventListener('click', saveStateToLocalStorage))
 
 const on = 'on'
 const off = 'off'
@@ -189,6 +186,10 @@ function restoreStateForProducts(productIds, iconClass, productsArray) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    buttons = document.querySelectorAll('.filters__buttons button');
+    checkBox = document.querySelector('.filters__checkbox-input');
+    navSection = document.querySelector('.filters');
+    document.querySelectorAll('.product__icon').forEach(icon => icon.addEventListener('click', saveStateToLocalStorage))
     restoreStateFromLocalStorage();
     loadProductStates();
     addEventListenersToNavComponents();
